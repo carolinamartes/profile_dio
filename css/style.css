@@ -102,8 +102,10 @@
             padding: 12vh 0;
         }
         
-        .links {
+        .links,
+        .links a {
             opacity: 0.6;
+            color: white;
             letter-spacing: 1px;
         }
         
@@ -111,6 +113,7 @@
             opacity: 0.9;
             cursor: pointer;
             letter-spacing: 2px;
+            color: white;
         }
         
         @media only screen and (min-width: 1200px) {
@@ -147,4 +150,23 @@
             .content-container {
                 max-width: 75vw;
             }
+        }
+        /*talks*/
+        
+        .talks-body {
+            background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../stardust.png');
+        }
+        
+        .main-talk-container {
+            width: 80vw;
+            margin: 0 auto;
+        }
+        
+        .video-container {
+            text-align: center;
+        }
+        
+        iframe,
+        video {
+            padding: 5em 0;
         }
