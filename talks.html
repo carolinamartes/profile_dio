@@ -157,9 +157,16 @@
                 <div class="modal-body">
                     <div class="modal-video">
                         <div class="embed-responsive embed-responsive-16by9">
-                            <video controls>
-                                <source src="https://mediastream.cern.ch/MediaArchive/Video/Public/Conferences/2018/670734c31/670734c31-800-kbps-640x360-25-fps-audio-96-kbps-44-kHz-stereo.mp4" type="video/mp4">
-                            </video>
+                            <figure id="video_player">
+                                <video controls>
+                                    <source src="https://mediastream.cern.ch/MediaArchive/Video/Public/Conferences/2018/670734c31/670734c31-800-kbps-640x360-25-fps-audio-96-kbps-44-kHz-stereo.mp4" type="video/mp4">
+                                </video>
+                                <figcaption>
+                                    <a href="nambia1.mp4">Talk 1</a>
+                                    <a href="nambia2.mp4">Talk 2</a>
+                                    <a href="nambia3.mp4">Talk 3</a>
+                                </figcaption>
+                            </figure>
                         </div>
                     </div>
                 </div>
@@ -189,26 +196,26 @@
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script type="text/javascript">
-$('.launch-modal').on('click', function(e) {
-    e.preventDefault();
-    $('#' + $(this).data('modal-id')).modal();
-});
-$('.close').on('click', function(e) {
-    e.preventDefault();
-    const iframes = document.querySelectorAll('iframe');
-    const videos = document.querySelectorAll('video');
-    if (iframes) {
-        iframes.forEach((iframe) => {
-            const iframeSrc = iframe.src;
-            iframe.src = iframeSrc;
-        })
-    }
-    if (videos) {
-        videos.forEach((video) => {
-            video.pause();
-        })
-    }
-});
+    $('.launch-modal').on('click', function(e) {
+        e.preventDefault();
+        $('#' + $(this).data('modal-id')).modal();
+    });
+    $('.close').on('click', function(e) {
+        e.preventDefault();
+        const iframes = document.querySelectorAll('iframe');
+        const videos = document.querySelectorAll('video');
+        if (iframes) {
+            iframes.forEach((iframe) => {
+                const iframeSrc = iframe.src;
+                iframe.src = iframeSrc;
+            })
+        }
+        if (videos) {
+            videos.forEach((video) => {
+                video.pause();
+            })
+        }
+    });
 </script>
 
 </html>

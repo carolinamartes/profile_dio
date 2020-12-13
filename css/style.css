@@ -1,180 +1,144 @@
-        /* ---- reset ---- */
+/* ---- reset ---- */
 
-        body {
-            margin: 0;
-            font: normal 75% 'Libre Baskerville', sans-serif;
-            color: white;
-        }
+body {
+    margin: 0;
+    font: normal 75% 'Libre Baskerville', sans-serif;
+    color: white;
+}
 
-        canvas {
-            display: block;
-            vertical-align: bottom;
-        }
-        /* ---- particles.js container ---- */
+canvas {
+    display: block;
+    vertical-align: bottom;
+}
 
-        #particles-js {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-color: #000000;
-            background-image: url("");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: 50% 50%;
-            overflow: hidden;
-        }
-        /* ---- stats.js ---- */
-        /*
-.count-particles {
-    background: #000022;
+/* ---- particles.js container ---- */
+
+#particles-js {
     position: absolute;
-    top: 48px;
-    left: 0;
-    width: 80px;
-    color: #13E8E9;
-    font-size: .8em;
-    text-align: left;
-    text-indent: 4px;
-    line-height: 14px;
-    padding-bottom: 2px;
-    font-family: Helvetica, Arial, sans-serif;
-    font-weight: bold;
-}
-
-.js-count-particles {
-    font-size: 1.1em;
-}
-
-#stats,
-.count-particles {
-    -webkit-user-select: none;
-    margin-top: 5px;
-    margin-left: 5px;
-}
-
-#stats {
-    border-radius: 3px 3px 0 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
     overflow: hidden;
-    display: none;
 }
 
-.count-particles {
-    border-radius: 0 0 3px 3px;
-}*/
+.navbar-light {
+    margin: 0;
+    background-color: #fafafa;
+}
 
-        .navbar-light {
-            margin: 0;
-            background-color: #fafafa;
-        }
+.navbar-text,
+.navbar-right {
+    font-size: 1.5em;
+}
 
-        .navbar-text,
-        .navbar-right {
-            font-size: 1.5em;
-        }
+.navbar-text:hover {
+    cursor: pointer;
+}
 
-        .navbar-text:hover {
-            cursor: pointer;
-        }
+a {
+    color: black;
+    text-decoration: none;
+}
 
-        a {
-            color: black;
-            text-decoration: none;
-        }
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: lightslategrey;
+    background-color: transparent !important;
+}
 
-        a:hover,
-        a:focus {
-            text-decoration: none;
-            color: lightslategrey;
-            background-color: transparent !important;
-        }
+.content-container {
+    z-index: 1;
+    position: relative;
+    font-size: 3em;
+    color: white;
+    text-align: center;
+    height: 15vh;
+    margin: 0 auto;
+    font-family: 'Alegreya SC', sans-serif;
+}
 
-        .content-container {
-            z-index: 1;
-            position: relative;
-            font-size: 3em;
-            color: white;
-            text-align: center;
-            height: 15vh;
-            margin: 0 auto;
-            font-family: 'Alegreya SC', sans-serif;
-        }
+.content-wrapper {
+    padding: 12vh 0;
+}
 
-        .content-wrapper {
-            padding: 12vh 0;
-        }
+.links,
+.links a {
+    opacity: 0.6;
+    color: white;
+    letter-spacing: 1px;
+    font-family: 'Alegreya SC', sans-serif;
+}
 
-        .links,
-        .links a {
-            opacity: 0.6;
-            color: white;
-            letter-spacing: 1px;
-            font-family: 'Alegreya SC', sans-serif;
-        }
+.header{
+    opacity: 0.6;
+    color: white;
+    cursor: default;
+}
 
-        .header{
-            opacity: 0.6;
-            color: white;
-            cursor: default;
-        }
+.links:hover {
+    opacity: 0.9;
+    cursor: pointer;
+    letter-spacing: 2px;
+    color: white;
+}
 
-        .links:hover {
-            opacity: 0.9;
-            cursor: pointer;
-            letter-spacing: 2px;
-            color: white;
-        }
+@media only screen and (min-width: 1200px) {
+    .content-container {
+        max-width: 15vw;
+    }
+}
 
-        @media only screen and (min-width: 1200px) {
-            .content-container {
-                max-width: 15vw;
-            }
-        }
+@media only screen and (max-width: 1200px) {
+    .content-container {
+        max-width: 20vw;
+    }
+}
 
-        @media only screen and (max-width: 1200px) {
-            .content-container {
-                max-width: 20vw;
-            }
-        }
+@media only screen and (max-width: 979px) {
+    .content-container {
+        max-width: 25vw;
+    }
+}
 
-        @media only screen and (max-width: 979px) {
-            .content-container {
-                max-width: 25vw;
-            }
-        }
+@media only screen and (max-width: 767px) {
+    .content-container {
+        max-width: 40vw;
+    }
+}
 
-        @media only screen and (max-width: 767px) {
-            .content-container {
-                max-width: 40vw;
-            }
-        }
+@media only screen and (max-width: 480px) {
+    .content-container {
+        max-width: 55vw;
+    }
+}
 
-        @media only screen and (max-width: 480px) {
-            .content-container {
-                max-width: 55vw;
-            }
-        }
+@media only screen and (max-width: 320px) {
+    .content-container {
+        max-width: 75vw;
+    }
+}
 
-        @media only screen and (max-width: 320px) {
-            .content-container {
-                max-width: 75vw;
-            }
-        }
-        /*talks*/
+/*talks*/
 
-        .talks-body {
-            background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/stardust.png');
-        }
+.talks-body {
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/stardust.png');
+}
 
-        .main-talk-container {
-            width: 80vw;
-            margin: 0 auto;
-        }
+.main-talk-container {
+    width: 80vw;
+    margin: 0 auto;
+}
 
-        .video-container {
-            text-align: center;
-        }
+.video-container {
+    text-align: center;
+}
 
-        /***** Modal *****/
+/***** Modal *****/
 
 .modal-backdrop.in {
     filter: alpha(opacity=7);
@@ -212,7 +176,8 @@
 }
 
 .video-link {
-    padding-top: 70px;
+    padding-top: 35px;
+    padding-bottom: 35px;
 }
 
 .video-link a:hover,
@@ -247,17 +212,26 @@ a .video-link-icon {
     -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
 }
 
-a .orange{
- background: #e89a3e;
+a .orange {
+    background: #e89a3e;
 }
 
-a .red{
- background: #FF7575;
+a .red {
+    background: #FF7575;
 }
 
-a .blue{
- background: #7BCAE1;
+a .blue {
+    background: #7BCAE1;
 }
+
+a .green {
+    background: #5FB15F;
+}
+
+a .purple {
+    background: #b19cd9;
+}
+
 a .video-link-icon:after {
     position: absolute;
     content: "";
